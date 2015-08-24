@@ -42,7 +42,7 @@ class UniqueRoleIdentifierValidator extends ConstraintValidator
 
         try {
             $role = $this->roleService->loadRoleByIdentifier($value->identifier);
-            // It is of course OK to edit a draft of an existing Role :-)
+            // It's of course OK to edit a draft of an existing Role :-)
             if ($role->id === $value->roleDraft->id) {
                 return;
             }
